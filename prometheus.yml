@@ -1,0 +1,8 @@
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+scrape_configs:
+  - job_name: 'destination-agent'
+    static_configs:
+      - targets: ['destination-agent:8001']
