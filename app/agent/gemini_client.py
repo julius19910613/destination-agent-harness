@@ -28,7 +28,7 @@ class GeminiClient:
                 "Google API key not found. Please provide api_key parameter or "
                 "set GOOGLE_API_KEY environment variable."
             )
-        self.model = model or os.getenv("GEMINI_MODEL", "gemini-1.5-flash")
+        self.model = (model or os.getenv("GEMINI_MODEL", "gemini-1.5-flash")).strip()
         self.client = genai.Client(api_key=self.api_key)
         logger.info(f"Gemini client initialized with model: {self.model}")
 
