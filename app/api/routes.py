@@ -101,7 +101,7 @@ async def batch_extract_destinations(requests: List[DestinationExtractionRequest
             )
 
         texts = [req.text for req in requests]
-        extractor = get_destination_extractor()
+        extractor = await get_destination_extractor()
         results = await extractor.batch_extract_destinations(texts)
         return results
 
