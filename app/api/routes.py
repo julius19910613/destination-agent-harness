@@ -11,7 +11,7 @@ from app.models.schemas import (
 from app.agent.destination_extractor import get_destination_extractor
 from app.monitoring.metrics import track_request_metrics
 from app.agent.gemini_client import get_gemini_client
-from app.security.auth import security_check
+from app.security.auth import security_check, InputValidator
 
 logger = logging.getLogger(__name__)
 
