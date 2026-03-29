@@ -58,7 +58,7 @@ async def extract_destination(
                 status_code=status.HTTP_400_BAD_REQUEST,
                 detail="Invalid input"
             )
-        extractor = get_destination_extractor()
+        extractor = await get_destination_extractor()
         result = await extractor.extract_destination(request.text)
         return result
 
